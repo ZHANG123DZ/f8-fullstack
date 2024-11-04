@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html{
+    font-family: "Poppins",sans-serif;
+    color: #191847;
+}
+body{
+    background-color:  #EEF2F9;
+}
+.product{
+    width: 723px;
+    height: 497px;
+    border-radius: 15px;
+    padding: 82px;
+    background-color: #FFFFFF; 
+    margin: 100px auto 0;
+}
+.right-content,
+.left-content{
+    display: inline-block;
+}
+
+/*  Đây là phần left content */
+.left-content{
+    width: 249px;
+    height: 223px;   
+    padding-right: 27px;
+    
+}
+
+/* Đây là phần right-content */
+.right-content{
+    width:  442px;
+    height: 497px;
+    vertical-align: top;
+}
+
+.product-info{
+
+    height: 111px;
+}
+.ship{  
+    width: 97px;
+    height: 21px;
+    border-radius: 20px;  
+    padding: 4px 8px 4px 8px; 
+    background-color: #191847;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+h1{
+    height: 72px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.price{
+    height: 114px;
+    padding: 32px 0px 32px 0px;
+}
+.origin{
+    height: 21px;
+    text-decoration: line-through;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.09px;
+}
+.sale{
+    height: 72px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+}
+.sale-time{
+    height: 21px;
+    gap: 0px;
+    opacity: 60%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+}
+
+.add-to-cart1{
+    width: 442px;
+    height: 59px;
+    padding: 16px ;
+    border-radius: 8px ;
+    border: none;
+    background-color: #4788E9;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    box-shadow: 0px 7px 0px 0px #1C57EE;
+    cursor: pointer;
+	transition: all ease-in-out 0.5s;
+    &:hover, &:active {
+	background-color: #1C57EE;
+    }
+}
+
+.available-order{
+    padding: 32px 0px 32px 0px;  
+    background-color: #FFFFFF;
+    i{
+        font-size: 13px;
+        color: #00D98B;
+    }     
+}
+
+.number{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.add-to{
+    width: 442px;
+    height: 64px;
+    gap: 10px;  
+    img{
+        font-size: 24px;
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+    }
+    span{    
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        vertical-align: middle;
+    }
+    button{
+        display: inline-block;
+        width: 213px;
+        height: 64px;
+        border-radius: 8px ;
+        background-color: #FFFFFF;
+        border: 2px solid #C9C9DA;
+        cursor: pointer;
+	    transition: all ease-in-out 0.5s;
+        &:hover, &:active{
+            background-color: #C9C9DA;
+        }
+    }
+}
+.add-to-cart2{
+    margin-right: 11px;   
+}
