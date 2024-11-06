@@ -99,9 +99,7 @@ main{
     padding: 24px;
     background-color: #FFFFFF;
     margin-right: 64px;
-    &:hover{
-        padding: 20px;
-        border: 4px solid #D8DAE2;
+    a:hover{
         cursor: pointer;
     }
 }
