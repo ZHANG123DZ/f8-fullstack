@@ -100,6 +100,9 @@ main{
     background-color: #FFFFFF;
     margin-right: 64px;
     a:hover{
+        position: relative;
+        bottom: 10px;
+        transition: ease-in-out 0.5s;
         cursor: pointer;
     }
 }
