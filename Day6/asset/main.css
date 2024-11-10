@@ -1,0 +1,167 @@
+/* common: begin */
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    color: #3A3A3A;
+}
+
+body {
+    background-color: #fff;
+}
+
+.amaya-coffe {
+    width: 100%;
+    padding: 62px 13.3%;
+}
+
+.logo {
+    height: 70px;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+/* common: end */
+
+/* header : begin */
+header {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+header  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 20px;
+}
+
+nav ul a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+    &:hover {
+        color: #AD5727;
+    }
+}
+/* header: end */
+/* main: begin */
+.banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-cafe img {
+    max-width: 100%;
+    margin-bottom: 64px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content span {
+    color: #AD5727;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+}
+
+.content p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37.5px;
+    text-align: center;
+}
+/* banner : end */
+/* article: begin */
+.articles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 32px;
+    margin-bottom: 96px;  
+}
+
+.article {
+    width: 448px;
+    height: 896px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap; 
+    align-items: center;  
+}
+.article:nth-child(odd) {
+    flex-direction: column;
+}
+.article .content {
+    align-self: center;
+    width: 448px;
+    margin: auto 0px;
+}
+.article img {
+    width: 448px;
+    height: 448px;
+    aspect-ratio: 1/1;
+}
+
+/* article: end */
+.cafe-decor-img {
+    width: 100%;
+    margin-bottom: 96px;
+}
+/* main:end */
+/* footer: begin */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .logo {
+    margin-top: 32px;
+}
+footer form {
+    margin-top: 48px;
+}
+footer .email {
+    width: 204px;
+    height: 39px;
+    border: 1px solid #9C9C9C;
+}
+footer button {
+    height: 99px;
+    height: 39px;
+    color:#fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+    background-color: #3A3A3A ;
+    &:hover {
+        transform: scale(1.1) ;
+    }
+}
+/* footer: end */

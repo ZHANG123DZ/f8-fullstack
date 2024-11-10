@@ -105,16 +105,6 @@ h1 {
     margin-bottom: 50px;
 }
 
-.right-content {
-    width: 50%;
-    img {
-        aspect-ratio: 1/1;
-        max-width: 500px;
-        width: 33vw;
-        border-radius: 50%;
-    }
-}
-
 .left-content a {
     border-radius: 6px;
     background-color: #96C67F;
@@ -131,6 +121,17 @@ h1 {
         transform: scale(1.2);
     }
 }
+
+.right-content {
+    width: 50%;
+    img {
+        aspect-ratio: 1/1;
+        max-width: 500px;
+        width: 33vw;
+        border-radius: 50%;
+    }
+}
+
 /* banner: end */
 
 /* trusted-company: begin */
@@ -182,6 +183,7 @@ h1 {
 .list-teacher {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .teacher {
