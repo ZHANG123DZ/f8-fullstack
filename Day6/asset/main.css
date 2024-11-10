@@ -72,6 +72,7 @@ nav ul a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 32px;
 }
 
 .banner-cafe img {
@@ -91,6 +92,8 @@ nav ul a {
 }
 
 .content p {
+    margin: 0px;
+    margin-top: 12px;
     font-weight: 700;
     font-size: 32px;
     line-height: 37.5px;
