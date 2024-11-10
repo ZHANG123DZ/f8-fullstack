@@ -147,7 +147,7 @@ footer .logo {
 footer form {
     margin-top: 48px;
 }
-footer .email {
+footer #email {
     width: 204px;
     height: 39px;
     border: 1px solid #9C9C9C;
