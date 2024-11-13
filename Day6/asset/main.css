@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* common: begin */
 *{
     box-sizing: border-box;
@@ -49,11 +50,11 @@ nav ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 32px;
 }
 
 nav ul li {
     list-style-type: none;
-    margin: 20px;
 }
 
 nav ul a {
@@ -154,15 +155,15 @@ footer #email {
     width: 204px;
     height: 39px;
     border: 1px solid #9C9C9C;
+    padding-left: 10px;
 }
 footer button {
-    height: 99px;
-    height: 39px;
     color:#fff;
     font-weight: 400;
     font-size: 16px;
     line-height: 18.75px;
     background-color: #3A3A3A ;
+    padding: 10px;
     &:hover {
         transform: scale(1.1) ;
     }
