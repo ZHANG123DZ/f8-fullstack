@@ -3,8 +3,9 @@
 *{
     box-sizing: border-box;
 }
-h1, h2, h3, p, a, nav, hr {
+h1, h2, h3, p, a, nav, hr, img, div {
     margin: 0px;
+    padding: 0px;
 }
 html {
     font-family: "Poppins";
@@ -19,45 +20,56 @@ ul,ol {
 a{
     text-decoration: none;
     color: #5F5B53;
+    font-size: 0px;
 }
 .logo {
     height: 34px;
 }
-header, .welcome,.Our-popular-courses, .student-comment, .learn-with-lesson-s, .Our-blog, footer {
+header, .hero, .Courses, .Testimonial, .Features, #CTA, .Blog, footer {
     padding: 0px 9%;
 }
-header, .welcome, .Our-blog {
+header, .hero, .Blog {
     background-color: #FFFCF4;
 }
-.Our-popular-courses, .learn-with-lesson {
+.Courses,  .Features {
     background-color: #FFFFFF;
 }
-.student-comment, footer {
+.Testimonial, footer {
     background-color: #2E2100;
     color: #BFBCB2;
+}
+.container {
+    margin: 0px auto;
+    max-width: 1170px;
 }
 .slider-dot ul {
     display: flex;
     flex-flow: row nowrap;
     gap: 6px;
     position: absolute;
-    transition: background-color 0.3s;
-    img {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: #634700;
+    i {
+        font-size: 6px;
+        color: #634700;
+        &:hover {
+            color: #FFB900;
+        }
     }
 }
 /* common: end */
 /* header: begin */
 header {
-    background-color: #FFFCF4;
+    position: fixed;
+    background-color: #fffcf4dd;
+    padding-top: 36px;
+    padding-bottom: 64px;
+    z-index: 99;
+    width: 100%;
+    
+}
+.header__inner  {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-top: 36px;
-    padding-bottom: 65px;
 }
 header .left-content {
     width: 50%;
@@ -110,18 +122,18 @@ header .sign-up {
 /* header: end  */
 /* main: begin */
 /* welcome: begin */
-.welcome {
-    background-color: #FFFCF4;
+.hero__inner {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     gap: 230px;
+    padding-top: 150px;
     padding-bottom: 65px;
 }
 .left-content {
     position: relative;
 }
-.welcome .left-content .boy {
+.hero__inner .left-content .boy {
     border-radius: 20px;
     width: 470px;
     height: 685px;
@@ -168,12 +180,12 @@ header .sign-up {
         color: #171100;
     }
 }
-.welcome .right-content {
+.hero__inner .right-content {
     display: flex;
     flex-flow: column wrap;
     margin-top: 64px;
 }
-.welcome .right-content h1 {
+.hero__inner .right-content h1 {
     font-family: "Sen";
     font-weight: 700;
     font-size: 58px;
@@ -182,7 +194,7 @@ header .sign-up {
     margin-bottom: 22px;
     color:#171100;
 }
-.welcome .right-content p {
+.hero__inner .right-content p {
     margin: 0px;
     font-size: 18px;
     line-height: 30px;
@@ -265,12 +277,11 @@ header .sign-up {
         font-weight: 400;
     }
 }
-/* welcome: end */
-/* Our-popular-courses: begin */
-.Our-popular-courses {
+/* hero: end */
+/* Courses: begin */
+.Courses__inner {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: #FFFFFF;
     display: flex;
     flex-flow: column wrap;
     position: relative;
@@ -280,14 +291,21 @@ header .sign-up {
         flex-flow: row wrap;
         gap: 18px;
         top: 242px;
-        right: 155px;
-        img {
-            width: 40px;
-            height: 40px;
+        right: 0px;
+        i {
+            font-size: 40px;
+            border-radius: 50%;
+            border: 1px solid #FFB900;
+            color: #FFB900;
+            background-color: #fff;
+            &:hover {
+                color: #fff;
+                background-color: #FFB900;
+            }
         }
     }
 }
-.Our-popular-courses h2 {
+.Courses__inner h2 {
     margin: 0px;
     font-family: "Sen";
     font-weight: 700;
@@ -297,7 +315,7 @@ header .sign-up {
     color: #171100;
     margin-bottom: 16px;
 }
-.Our-popular-courses .desc {
+.Courses__inner .desc {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 55px;
@@ -310,7 +328,7 @@ header .sign-up {
 }
 .topic {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     width: 370px;
     height: 466px;
     border-radius: 16px;
@@ -320,11 +338,13 @@ header .sign-up {
     }
     
 }
+.topic a img {
+    width: 368px;
+}
 .content {
     padding: 16px 22px;
     display: flex;
     flex-flow: column wrap;
-    background-color: #fff;
 }
 .content .name-course {
     display: flex;
@@ -380,22 +400,18 @@ header .sign-up {
         background-color: #FFB900;
     }
 }
-/* Our-popular-courses: end */
-/* student-comment: begin */
-.student-comment {
+/* Courses: end */
+/* Testimonial: begin */
+.Testimonial__inner {
     display: flex;
     flex-flow: row nowrap;
     gap: 240px;
     padding-top: 96px;
     padding-bottom: 96px;
     position: relative;
-    .slider-dot ul{
-        bottom: 96px;
-        left: 9%;
-    }
 }
 .left-student-comment {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-flow: column nowrap;
     .avatar {
@@ -427,12 +443,17 @@ header .sign-up {
         font-style: italic;
         font-size: 26px;
         line-height: 40px;
+        color: #fff;
+    }
+    i {
+        font-size: 30px;
+        color: #634700;
     }
     
 }
-/* student-comment: end */
-/* learn-with-lesson: begin  */
-.learn-with-lesson-s {
+/* Testimonial: end */
+/* Features: begin  */
+.Features__inner {
     display: flex; 
     flex-flow: column nowrap;
     padding-top: 200px;
@@ -498,9 +519,9 @@ header .sign-up {
     }
     
 }
-/* learn-with-lesson: end  */
-/* our-blog: begin */
-.Our-blog {
+/* Features: end  */
+/* Blog: begin */
+.Blog__inner {
     display: flex;
     flex-flow: column;
     padding-top: 96px;
@@ -511,7 +532,7 @@ header .sign-up {
         margin-top: 38px; 
     }
 }
-.Our-blog h2 {
+.Blog__inner h2 {
     align-self: center;
     font-family: "Sen";
     font-weight: 700;
@@ -520,70 +541,73 @@ header .sign-up {
     color: #130606;
     margin-bottom: 16px;
 }
-.Our-blog p {
+.Blog__inner p {
     align-self: center;
     color: #696262;
     margin-bottom: 55px;
+    text-align: center;
 }
-.Our-blog .topic {
+.Blog__inner .topic {
     border: 0px;
 }
-.Our-blog .content {
+.Blog__inner .content {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
     padding: 20px 20px 28px 20px;
     gap: 12px;
+    background-color: #fff;
 }
-.Our-blog .content .time {
+.Blog__inner .content .time {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    img {
+    i {
+        font-size: 6px;
+        color: #FFB900;
         margin-right: 10px;
     }
 }
-.Our-blog hr {
+.Blog__inner hr {
     width: 60%;
 }
-.Our-blog .content h3 {
+.Blog__inner .content h3 {
     font-weight: 600;
     font-size: 16px;
     line-height: 28px;
     color: #171100;
 }
-.Our-blog .btn {
+.Blog__inner .btn {
     width: 37.5%;
 }
 /* our-blog: end */
 /* main: end */
 /* footer: begin */
-footer {
+.footer__inner {
     padding-top: 96px;
     padding-bottom: 28px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 145px;
+    flex-flow: column wrap; 
+    gap: 32px;
 }
-footer .desc {
-    width: 22%;
+.main__footer {
     display: flex;
-    flex-flow: column nowrap;
-    gap: 18px;   
+    flex-flow: row wrap;
+    gap: 50px;
+    justify-content: space-between;
+}
+.footer__inner .info {
+    display: flex;
+    flex-flow: column wrap;
+    &:last-of-type {
+        width: 20%;
+    }  
+}
+.footer__inner .info {
     p {
         font-size: 14px;
         line-height: 26px;
     }
-}
-footer .desc ul {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 18px;
-    i {
-        font-size: 15px;
-        color: #fff;
-    }
-}
-footer .info {
-    p {
+    h3 {
         font-weight: 600;
         font-size: 16px;
         line-height: 28px;
@@ -605,24 +629,42 @@ footer .info {
             color: #BFBCB2;
         }
     }
+    a {
+        color: #BFBCB2;
+    }
 }
-footer .info ul {
+.footer__inner .info ul {
     display: flex;
     flex-flow: column wrap;
     gap: 12px;
-    li {
+    a {
         font-size: 14px;
         line-height: 26px;
     }
+}
+.footer__inner .desc {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 18px;
+    width: 23%;
+}
+.footer__inner .desc ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 18px;
+    i {
+        font-size: 15px;
+        color: #fff;
+    }
+}
+.footer__inner hr {
+    border-color: #59554B; 
 }
 .copyright {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
     gap: 28px;
-    hr {
-        border-color: #59554B;
-    }
     p {
         align-self: center;
         color: #807D74;
