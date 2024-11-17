@@ -25,13 +25,13 @@ a{
 .logo {
     height: 34px;
 }
-header, .hero, .Courses, .Testimonial, .Features, #CTA, .Blog, footer {
+header, .hero, .Courses, .Testimonial, .Features, .CTA, .Blog, footer {
     padding: 0px 9%;
 }
 header, .hero, .Blog {
     background-color: #FFFCF4;
 }
-.Courses,  .Features {
+.Courses,  .Features, .CTA {
     background-color: #FFFFFF;
 }
 .Testimonial, footer {
@@ -452,19 +452,24 @@ header .sign-up {
     
 }
 /* Testimonial: end */
-/* Features: begin  */
-.Features__inner {
+/* Features-CTA: begin  */
+.Features-CTA__inner {
     display: flex; 
     flex-flow: column nowrap;
     padding-top: 200px;
     padding-bottom: 200px;
     gap: 200px;
 }
-.learn-with-lesson {
+.common_F_CTA {
     display: flex;
     flex-flow: row-reverse nowrap;
     gap: 130px;
-    .img-lesson {
+    &:nth-of-type(odd) {
+        flex-direction: row;
+    }
+}
+.Features__inner {
+    .img-Features {
         width: 50%;
         display: flex;
         flex-flow: row nowrap;
@@ -479,15 +484,14 @@ header .sign-up {
             margin-top: 34px;
         }
     }
+}
+.CTA__inner {
     #learner2 {
         width: 470px;
         height: 440px;
     }
-    &:nth-of-type(odd) {
-        flex-direction: row;
-    }
 }
-.learn-with-lesson .content {
+.common_F_CTA .content {
     display: flex;
     flex-flow: column nowrap;
     gap: 16px;
@@ -497,6 +501,7 @@ header .sign-up {
         font-weight: 700;
         font-size: 38px;
         line-height: 48px;
+        color: #171100;
     }
     p {
         font-size: 16px;
@@ -519,7 +524,7 @@ header .sign-up {
     }
     
 }
-/* Features: end  */
+/* Features-CTA: end  */
 /* Blog: begin */
 .Blog__inner {
     display: flex;
