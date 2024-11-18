@@ -42,11 +42,13 @@ header, .hero, .Blog {
     margin: 0px auto;
     max-width: 1170px;
 }
-.slider-dot ul {
+.slider-dot {
+    position: absolute;
+    ul {
     display: flex;
     flex-flow: row nowrap;
     gap: 6px;
-    position: absolute;
+    }
     i {
         font-size: 6px;
         color: #634700;
@@ -414,12 +416,16 @@ header .sign-up {
     width: 50%;
     display: flex;
     flex-flow: column nowrap;
+    position: relative;
     .avatar {
         width: 72px;
         height: 72px;
         border-radius: 100%;
         aspect-ratio: 1/1;
         margin-bottom: 18px;
+    }
+    .slider-dot {
+        bottom: 0px;
     }
 }
 .left-student-comment {
@@ -437,7 +443,6 @@ header .sign-up {
     }
 }
 .right-student-comment {
-    position: relative;
     p{
         margin-left: 30px;
         font-style: italic;
@@ -534,7 +539,7 @@ header .sign-up {
     position: relative;
     .slider-dot {
         align-self: center;
-        margin-top: 38px; 
+        bottom: 96px; 
     }
 }
 .Blog__inner h2 {
