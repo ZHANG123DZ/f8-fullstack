@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 2fr 9fr 1fr 2fr ;
+        }
+        .line {
+            border: 1px dashed blue;
+        }
+        header {
+            grid-column: 1/span 3;
+        }
+        .left-content {
+            grid-row: 2/span 10;
+        }
+        .right-content {
+            grid-row: 2/span 10;
+        }
+        .main-content {
+            grid-row: 2/span 9;
+        }
+        footer {
+            grid-column: 1/span 3;
+        }
+    </style>
+    <title>grid-template-1</title>
+</head>
+<body>
+    <div class="container">
+        <header class="line">Header</header>
+        <div class="left-content line">Left-content</div>
+        <div class="main-content line">Main content</div>
+        <div class="right-content line">Right-content</div>
+        <div class="sub-content line">Sub content</div>
+        <footer class="line">Footer</footer>
+    </div>
+</body>
+</html>

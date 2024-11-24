@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: "header header header"
+            "left-content main-content right-content"
+            "left-content sub-content right-content"
+            "footer footer footer"
+            ;
+            margin-left: auto;
+            margin-right: auto;
+            grid-auto-rows: minmax(100px, auto);
+            gap: 10px;
+        }
+        .line {
+            border: 1px dashed blue;
+        }
+        header {
+            grid-area: header;
+        }
+        .left-content {
+            grid-area: left-content;
+        }
+        .main-content {
+            grid-area: main-content;
+        }
+        .sub-content {
+            grid-area: sub-content;
+        }
+        .right-content {
+            grid-area: right-content;
+        }
+        footer {
+            grid-area: footer;
+        }
+    </style>
+    <title>Grid-area-1</title>
+</head>
+<body>
+    <div class="container">
+        <header class="line">Header</header>
+        <div class="left-content line">Left-content</div>
+        <div class="main-content line">Main content</div>
+        <div class="right-content line">Right-content</div>
+        <div class="sub-content line">Sub content</div>
+        <footer class="line">Footer</footer>
+    </div>
+</body>
+</html>

@@ -43,7 +43,13 @@ header {
     justify-content: space-between;
     margin-bottom: 100px;
 }
-
+nav a:hover::before {
+    content: " ";
+    border: 2px solid #1F1D2A;
+    width: 50%;
+    position: absolute;
+    bottom: 0px;
+}
 .logo {
     font-size: 32px;
     line-height: 48px;
@@ -57,17 +63,9 @@ header nav ul {
 header li a {
     padding: 10px 20px;
     margin: 5px;
+    position: relative;
 }
-header li {
-    transition: border-color earse 0.5s;
-    &:hover {
-        text-decoration: underline; 
-        text-decoration-color: #1F1D2A; 
-        text-decoration-thickness: 2px; 
-        text-underline-position: under;
-    }
-    
-}
+
 header .btn {
     border-radius: 6px;
     border: 1px solid #1F1D2A;
