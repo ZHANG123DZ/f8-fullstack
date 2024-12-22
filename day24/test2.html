@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>bài 2</h1>
+    <script>
+        // Input:
+
+function fibonacci(n) {
+	// Xử lý và in ra kết quả
+    if (typeof n === "number" && n>0 && Number.isInteger(n)) {
+        let result = [];
+        for (let i=0 ; i<n ; i++ ){
+            if (i===0 ) {
+                result.push(0);
+            }
+            else if (i===1 ) {
+                result.push(1);
+            }
+            else {
+                result.push(result[i-1]+ result[i-2]);
+            }
+        }
+        return console.log(result.join(" "));
+    }
+    console.log("Số phần tử không hợp lệ") ;
+    return ;
+}
+
+/// Output:
+
+fibonacci(5); // 0 1 1 2 3
+
+fibonacci(10); // 0 1 1 2 3 5 8 13 21 34
+
+fibonacci(0); // Số phần tử không hợp lệ
+
+fibonacci(-5); // Số phần tử không hợp lệ
+
+fibonacci("abc"); // Số phần tử không hợp lệ
+
+fibonacci(1); // 0
+
+    </script>
+</body>
+</html>

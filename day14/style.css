@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+header {
+    display: grid;
+    grid-template-columns: 2;
+}
+nav ul {
+    display: grid;
+    gap: 20px;
+}

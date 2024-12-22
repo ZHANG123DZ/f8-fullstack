@@ -1,0 +1,38 @@
+h1 {
+    position: relative;
+    margin: 400px auto;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    rotate: 45deg;
+    animation: heart 3s ease-in-out 0.5s infinite;
+}
+h1::after {
+    position: absolute;
+    content: "";
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+}
+h1::before {
+    position: absolute;
+    content: "";
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+}
+@keyframes heart {
+    0% {
+        scale: 0.7;
+    }
+    50% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.2;
+    }
+}
