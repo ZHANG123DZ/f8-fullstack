@@ -9,7 +9,7 @@
     <h1>bài 2</h1>
     <script>
         // Input:
-
+let n = parseInt(window.prompt("Nhập số lượng trong dãy số fibonacci mà bạn muốn:"));
 function fibonacci(n) {
 	// Xử lý và in ra kết quả
     if (typeof n === "number" && n>0 && Number.isInteger(n)) {
@@ -25,25 +25,25 @@ function fibonacci(n) {
                 result.push(result[i-1]+ result[i-2]);
             }
         }
-        return console.log(result.join(" "));
+        return alert(result.join(" "));
     }
-    console.log("Số phần tử không hợp lệ") ;
+    alert("Số phần tử không hợp lệ") ;
     return ;
 }
-
+fibonacci(n);
 /// Output:
 
-fibonacci(5); // 0 1 1 2 3
+// fibonacci(5); // 0 1 1 2 3
 
-fibonacci(10); // 0 1 1 2 3 5 8 13 21 34
+// fibonacci(10); // 0 1 1 2 3 5 8 13 21 34
 
-fibonacci(0); // Số phần tử không hợp lệ
+// fibonacci(0); // Số phần tử không hợp lệ
 
-fibonacci(-5); // Số phần tử không hợp lệ
+// fibonacci(-5); // Số phần tử không hợp lệ
 
-fibonacci("abc"); // Số phần tử không hợp lệ
+// fibonacci("abc"); // Số phần tử không hợp lệ
 
-fibonacci(1); // 0
+// fibonacci(1); // 0
 
     </script>
 </body>

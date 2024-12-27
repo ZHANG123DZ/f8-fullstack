@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function electric_fee (electric) {
+            if (typeof electric !== "number" || electric<0 || electric === Number.isNaN(electric)) {
+                return console.log("nhập sai ");
+            }
+            let money = 0;
+            if (electric <= 50 ) {
+                money =electric*1.678 ;
+            }
+            else if (electric >=51 && electric <= 100) {
+                money = electric*1.734 ;
+            }
+            else if (electric >=101 && electric <= 200) {
+                money = electric*2.014 ;
+            }
+            else if (electric >=201 && electric <= 300) {
+                money = electric*2.536 ;
+            }
+            else if (electric >=301 && electric <= 400) {
+                money = electric*2.834 ;
+            }
+            else {
+                money = electric*2.927 ;
+            }
+            return console.log(money);
+        }
+        electric_fee(4);
+    </script>
+</body>
+</html>

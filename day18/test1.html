@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tax (salary) {
+            if (typeof salary !== "number" || salary<=0 || salary === Number.isNaN(salary)) {
+                return console.log("Lương nhập ko chính xác");
+            }
+            let personal_income_tax = 0;
+            if (salary <= 11) {
+                personal_income_tax =0 ;
+            }
+            else if (salary >11 && salary <= 25) {
+                personal_income_tax = salary*0.05 ;
+            }
+            else if (salary >25 && salary <= 50) {
+                personal_income_tax = salary*0.1 ;
+            }
+            else if (salary >50 && salary <= 80) {
+                personal_income_tax = salary*0.2 ;
+            }
+            else {
+                personal_income_tax = salary*0.3 ;
+            }
+            return console.log(personal_income_tax);
+        }
+        
+
+        
+    </script>
+</body>
+</html>
