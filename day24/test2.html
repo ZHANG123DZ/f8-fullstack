@@ -9,7 +9,7 @@
     <h1>bài 2</h1>
     <script>
         // Input:
-let n = parseInt(window.prompt("Nhập số lượng trong dãy số fibonacci mà bạn muốn:"));
+let n = parseFloat(window.prompt("Nhập số lượng trong dãy số fibonacci mà bạn muốn:"));
 function fibonacci(n) {
 	// Xử lý và in ra kết quả
     if (typeof n === "number" && n>0 && Number.isInteger(n)) {
@@ -25,7 +25,8 @@ function fibonacci(n) {
                 result.push(result[i-1]+ result[i-2]);
             }
         }
-        return alert(result.join(" "));
+        alert(result.join(" "));
+        return ;
     }
     alert("Số phần tử không hợp lệ") ;
     return ;

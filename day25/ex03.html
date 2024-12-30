@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+ * Add a custom reduce2 method to Array.prototype
+ * This method mimics the behavior of Array.prototype.reduce
+ * @param {function} callback - The function to execute for each element in the array.
+ * @param {any} [initialValue] - Optional. Value to use as the first argument to the first call of the callback.
+ * @returns {any} - The value that results from the reduction.
+ */
+
+function isEmpty (value) {
+  return (
+    value === undefined ||
+    value === null ||
+    (typeof value === 'string' && value.trim() === ' ') ||
+    (typeof value === 'object' && Object.keys(value).length === 0)||
+    (Array.isArray(value) && value.length === 0)
+  )
+}
+Array.prototype.reduce2 = function (callback, initialValue) {
+  if (initialValue === undefined) {
+    if (this.length ) initialValue = this[0];
+    else  {
+      throw new Error("Reduce of empty array with no initial value");
+    }
+  }
+  
+  for (let i=0 ; i< this.length ; i++) {
+    if (this[i].length === 0) continue;
+    initialValue = callback(initialValue, this[i], i, this);
+  }
+  return initialValue;
+};
+
+// Sample usage
+
+// Sample 1
+
+const arr1 = [1, 2, 3, 4, 5];
+const result1 = arr1.reduce((accumulator, value) => {
+  return accumulator + value;
+}, 0);
+
+console.log(result1); // 15
+
+
+
+// Sample 3
+
+const arr3 = [];
+
+const result3 = arr3.reduce2((accumulator, value) => {
+  return accumulator + value;
+}, 0);
+
+console.log(result3); // 0
+
+// Sample 2
+
+const arr2 = [];
+
+const result2 = arr2.reduce((accumulator, value) => {
+  return accumulator + value;
+});
+
+console.log(result2); // Error: Reduce of empty array with no initial value
+
+    </script>
+</body>
+</html>
