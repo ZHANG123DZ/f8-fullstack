@@ -50,6 +50,7 @@ const categories = [
 ];
 
 const flattenCategories = (categories, level=0) => {
+	if (!Array.isArray(categories)) throw new Error("Mảng không hợp lệ");
 	let flatten = [];
 	for (const category of categories){
 		flatten.push({id: category.id, name: category.name, level });
