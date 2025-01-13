@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countDown(){
+            setInterval(() => {
+                const new_year = new Date("2026-01-01 00:00:00");
+                const now = Date.now();
+                let date = Math.round((new_year.getTime()-now)/(1000*60*60*24));
+                let hours = Math.round((new_year.getTime()-now)/(1000*60*60));
+                let minutes = Math.round((new_year.getTime()-now)/(1000*60));
+                let seconds = Math.round((new_year.getTime()-now)/(1000));
+                let content = `Còn ${date} ngày ${hours} giờ ${minutes} phút ${seconds} giây là đến tết 2026với`;
+                document.write(content);
+                document.close();
+            }, 1000);
+        }
+        countDown();
+    </script>
+</body>
+</html>

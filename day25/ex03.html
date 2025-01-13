@@ -15,15 +15,7 @@
  * @returns {any} - The value that results from the reduction.
  */
 
-function isEmpty (value) {
-  return (
-    value === undefined ||
-    value === null ||
-    (typeof value === 'string' && value.trim() === ' ') ||
-    (typeof value === 'object' && Object.keys(value).length === 0)||
-    (Array.isArray(value) && value.length === 0)
-  )
-}
+
 Array.prototype.reduce2 = function (callback, initialValue) {
   if (initialValue === undefined) {
     if (this.length ) initialValue = this[0];

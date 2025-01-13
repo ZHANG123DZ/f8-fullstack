@@ -22,13 +22,16 @@
         Năm 2016 - nay:Các phiên bản ECMAScript mới được ra mắt liên tục,với nhiều cải tiến và tính năng mới.Cho đến nay javaScript đã trở thành một trong số những ngôn ngữ được ưa chuộng và sử dụng nhiều nhất thế giới.`;
         jsContent = jsContent.replace(/\s{5,}/g,`<br>`);
         function printHighlight(content, keyword) {
+            if (!Array.isArray(categories)) throw new Error("Mảng không hợp lệ");
             keyword = new RegExp(keyword,"gi");
             let newJs = content.replace(keyword,(match) => `<b>${match}</b>`);
             return newJs;
         }
         let Highlights = document.querySelector("#printHighlight");
         Highlights.innerHTML += printHighlight(jsContent, "javascript");
+
         function fixContent(content) {
+            if (!Array.isArray(content)) throw new Error("Mảng không hợp lệ");
             let newJs2 = content.replace(/([.!?])(?=[A-Z])|([,;:])(?=\S)/g, (match) => match + " ");
             newJs2 = newJs2.replace(/(?<=\s)([[({<])/g, (match) => " " + match );
             newJs2 = newJs2.replace(/([>})\]])(?!\s)/g, (match) => match + " ");
