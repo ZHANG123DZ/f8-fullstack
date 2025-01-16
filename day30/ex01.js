@@ -42,7 +42,7 @@ const menu = [
   ];
 
 function convertNested(arr){
-  if (!Array.isArray(arr)) throw new Error("It is not type array");
+  if (!Array.isArray(arr) || arr.length<=0) throw new Error("It is not type array");
   const body = document.querySelector("body");
   const mainMenu =document.createElement("ul");
   mainMenu.setAttribute("id", "main-menu");
