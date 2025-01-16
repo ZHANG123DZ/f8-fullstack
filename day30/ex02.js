@@ -37,6 +37,8 @@ const cart = [
   ];
 
 function renderOrder(cart){
+    if (!Array.isArray(cart)) throw new Error("It is not type array");
+
     const body = document.querySelector("body");
     const table = document.createElement("table");
     const thead = document.createElement("thead");

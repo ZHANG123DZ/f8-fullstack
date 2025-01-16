@@ -40,11 +40,14 @@ const menu = [
       parentId: 4
     }
   ];
-const body = document.querySelector("body");
-const mainMenu =document.createElement("ul");
-mainMenu.setAttribute("id", "main-menu");
-body.appendChild(mainMenu);
+
 function convertNested(arr){
+  if (!Array.isArray(arr)) throw new Error("It is not type array");
+  const body = document.querySelector("body");
+  const mainMenu =document.createElement("ul");
+  mainMenu.setAttribute("id", "main-menu");
+  body.appendChild(mainMenu);
+
   let lookup = {};
   let nestedMenu = [];
   arr.forEach((item) =>{
