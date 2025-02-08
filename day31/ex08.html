@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #shareBill {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 0px auto;
+            background-color: aquamarine;
+            padding: 50px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="shareBill">
+        <h1>Chia Bill</h1>
+        <h2>Tổng bill</h2>
+        <input type="text" id="bill">
+        <h2>Số người chia:</h2>
+        <input type="text" id="persons">
+        <h2>Tiền tip:</h2>
+        <input type="text" id="tips" placeholder="Nhập tiền tip (nếu có)...">
+        <button id="button">Tính tiền</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="./ex08.js"></script>
+</body>
+</html>

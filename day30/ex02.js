@@ -59,17 +59,17 @@ function renderOrder(cart){
 
     // tbody
     let totals =0;
-    cart.forEach((items) => {
+    cart.forEach((item) => {
         const tr = document.createElement("tr");
-        items.total = items.quantity * items.price;
-        totals += items.total;
+        item.total = item.quantity * item.price;
+        totals += item.total;
         
-        const info = [items.name, items.price, items.quantity, items.total];
-        info.forEach((item) => {
+        const info = [item.name, item.price, item.quantity, item.total];
+        info.forEach((prop) => {
             const td = document.createElement("td");
-            td.textContent = item;
+            td.textContent = prop;
             tr.appendChild(td);
-            if (items.hotSale === true){
+            if (item.hotSale === true){
                 tr.style.color = "red";
             }
         })

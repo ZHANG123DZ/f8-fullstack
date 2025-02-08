@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calculator {
+            display: flex;
+            flex-direction: row;
+            max-width: 800px;
+            margin: 0px auto;
+            background-color: aquamarine;
+            padding: 50px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        #input {
+            display: flex;
+            flex-direction: column;
+        }
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+        }
+        #operations {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: repeat(2, 100px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bé Tập Tính Website</h1>
+    <div id="calculator">
+        
+        <div id="input">
+            <span>Nhập số thứ nhất: <input type="text" id="number1"></span>
+            <span>Nhập số thứ hai: <input type="text" id="number2"></span>
+            <span>Kết quả: <div id="result"></div></span>
+        </div>
+        
+        <div id="operations">
+            <span>
+                <input type="radio" value="+"> Cộng
+            </span>
+            <span>
+                <input type="radio" value="-"> Trừ
+            </span>
+            <span>
+                <input type="radio" value="*"> Nhân
+            </span>
+            <span>
+                <input type="radio" value="/"> Chia
+            </span>
+            <button id="calculate">Tính</button>
+        </div>
+        
+    </div>
+    <script src="./ex07.js"></script>
+</body>
+</html>

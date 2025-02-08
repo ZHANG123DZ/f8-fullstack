@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./ex01.css">
+</head>
+<body>
+    <title>Todo App</title>
+    <main>
+    <!-- Page heading -->
+    <h1 class="page-heading">Get Thing Done!</h1>
+    <form id="todo-form" action="" class="todo-form">
+        <input
+            type="text"
+            id="todo-input"
+            class="input_task"
+            placeholder="What are your tasks for today?"
+            spellcheck="false"
+        />
+        <button
+            id="submit"
+            class="submit-btn"
+            onmousedown="event.preventDefault()"
+        >
+            Thêm
+        </button>
+        <select id="filter">
+            <option value="all">Tất cả</option>
+            <option value="completed">Hoàn thành</option>
+            <option value="incomplete">Chưa hoàn thành</option>
+        </select>
+    </form>
+    <ul id="task-list" class="task-list">
+
+    </ul>
+    <script src="./ex01.js"></script>
+</body>
+</html>
