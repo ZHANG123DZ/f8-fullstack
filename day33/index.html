@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div id="todoApp">
+        <div id="searchBar">
+            <input type="search" placeholder="Search task now?" id="search-input" name="searchInput">
+        </div>
+        
+        <div id="main-content">
+            <ul id="task-list"></ul>
+            <div class="option">
+                <button id="create-task">Thêm Task</button>
+                <div>
+                    <label for="status">Trạng thái:</label>
+                    <select name="status" id="filter-status">
+                        <option value="todo">Tất cả</option>
+                        <option value="doing">Đang làm</option>
+                        <option value="done">Hoàn thành</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="priority">Ưu tiên:</label>
+                    <select name="priority" id="filter-priority">
+                        <option value="decrease">Giảm dần</option>
+                        <option value="increase">Tăng dần</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="taskOverlay" class="overlay hidden">
+        <form id="taskForm">
+            <button type="button" class="close-btn">&times;</button>
+            <h2>Thêm / Chỉnh sửa Task</h2>
+    
+            <label for="input-title">Tiêu đề:</label>
+            <input type="text" id="input-title" name="title" required>
+    
+            <label for="status">Trạng thái:</label>
+            <select name="status">
+                <option value="doing">Đang làm</option>
+                <option value="done">Hoàn thành</option>
+            </select>
+    
+            <label for="priority">Ưu tiên:</label>
+            <select name="priority">
+                <option value="low">Thấp</option>
+                <option value="medium">Trung bình</option>
+                <option value="high">Cao</option>
+            </select>
+    
+            <button type="submit" id="submit-btn">Thêm Task</button>
+        </form>
+    </div>    
+    <script src="./index.js"></script>
+</body>
+</html>

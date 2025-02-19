@@ -1,0 +1,15 @@
+#loginForm {
+    max-width: 600px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(231, 228, 224);
+    border-radius: 20px;
+    padding: 100px;
+}
+button {
+    border-radius: 20px;
+    background-color: rgb(131, 198, 236);
+    margin: 10px;
+    height: 30px;
+}

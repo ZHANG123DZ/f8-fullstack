@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.classList.toggle('completed', task.completed)
                 li.classList.add('task-item')
 
-                const span = document.createElement('span')
-                span.textContent = task.title
-                span.classList.add('task-title')
+                const title = document.createElement('span')
+                title.textContent = task.title
+                title.classList.add('task-title')
 
                 const task_action = document.createElement('div')
                 task_action.classList.add('task-action')
@@ -40,8 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 delete_btn.classList.add('task-btn')
                 delete_btn.classList.add('delete')
 
+                const span = 
+
                 task_action.append(edit, done, delete_btn)
-                li.append(span, task_action)
+                li.append(title, task_action, span)
 
                 taskList.appendChild(li)
 
