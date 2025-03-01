@@ -108,12 +108,10 @@ button, select {
     position: relative;
 }
 
-/* Khi overlay hiển thị, form trượt xuống */
 .overlay.show #taskForm {
     transform: translateY(0);
 }
 
-/* ============ Nút đóng form ============ */
 .close-btn {
     position: absolute;
     top: 10px;
