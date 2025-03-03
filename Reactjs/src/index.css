@@ -1,0 +1,41 @@
+ul, li {
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: antiquewhite;
+}
+#root {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: rgb(175, 185, 185);
+  display: flex;
+  gap: 200px;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+.toggle {
+  color: rgb(22, 224, 66);
+  background-color: rgb(255, 0, 0);
+  width: 100px;
+  padding: 20px;
+  margin: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+footer {
+  background-color: bisque;
+}
